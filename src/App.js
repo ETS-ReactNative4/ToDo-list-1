@@ -33,8 +33,6 @@ this.textInput.focus();
    }
  }
 
- 
-
  deleteNote(index){
    let notesArr= this.state.notes;
    notesArr.splice(index,1);
@@ -44,21 +42,21 @@ this.textInput.focus();
 
     let notes = this.state.notes.map((val,key) =>{
       return <Note key={key} text={val}
-      deleteMethod={ () => this.deleteNote(key)}/>
+      deleteMethod={() => this.deleteNote(key).bind(this)}/>
     })
 
     return (
       <div className="container">
 
         <div className="header"> To-Do List</div>
-        <div className="footer"> Input Below</div>
 
-        {notes}
+        {notes} 
+
         <div className= "btn" onClick= {this.addNote.bind(this)}>+</div>
         <div className= "btn1" onClick= {this.deleteNote.bind(this)}>-</div>
 
-        <input type="text"
-        ref ={((input) => {this.textInput = input})}
+        <input type="text" placeholder="TYPE HERE!!"
+         ref ={((input) => {this.textInput = input})}
         className="textInput"
         value = {this.state.noteText} 
         onChange={noteText => this.updateNoteText(noteText)}
