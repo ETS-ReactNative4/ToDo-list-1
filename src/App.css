@@ -27,7 +27,7 @@
     text-align: center;
     padding: 70px;
  }
-  .footer {
+  /* .footer {
     font-size: 15px;
     font-weight: bold;
     font-style: oblique;
@@ -35,7 +35,7 @@
     position: relative;
     bottom: -545px;
     left: -20px;
-  }
+  } */
 
   /* The note */
   .note {
@@ -96,12 +96,12 @@
   }
   /* Textinput */
   .textInput {
-    padding-top: 1000px;
+    padding-top: 100px;
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 80px;
-    line-height: 80px;
+    line-height: 25px;
     padding: 0 20px;
     border: none;
     outline: none;
